@@ -1,0 +1,7 @@
+# build environment for cygwin
+#copy follow command for compiled
+
+bison -y -d cal.y
+flex cal.l
+gcc -c y.tab.c lex.yy.c
+gcc y.tab.o lex.yy.o -o cal.exe
